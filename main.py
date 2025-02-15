@@ -1,12 +1,14 @@
 from flask import Flask, render_template
 
-app = Flask("Website")
+app = Flask(__name__)
 
-'Commit 1'
 
 @app.route("/home")
 def home():
-    return render_template("tutorial.html")
+    return render_template("home.html")
 
 
-app.run(debug=True)
+app.run(debug=True,  port=5001)
+
+
+
